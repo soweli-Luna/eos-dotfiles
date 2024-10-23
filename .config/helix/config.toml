@@ -1,0 +1,64 @@
+theme = "new_moon_mod"
+
+[editor]
+# Appearance
+color-modes = true
+line-number = "relative" # It's only relative in normal mode. Absolute in insert.
+cursorline = true # Makes the current line highlighted.
+bufferline = "multiple"
+gutters = ["diff", "spacer", "diagnostics", "line-numbers", "spacer", "spacer"]
+
+# Behaviour
+mouse = false
+auto-format = true
+auto-completion = true
+
+[editor.cursor-shape]
+# Aids in knowing what mode you're in.
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.statusline]
+# Elements
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "separator", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+# Overwrite mode indicator text.
+mode.normal = "          NORMAL          "
+mode.insert = "          INSERT          "
+mode.select = "          SELECT          "
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.file-picker]
+hidden = false
+
+# =========== KEY REMAPPING ==========
+[keys.normal]
+up = "no_op"
+down = "no_op"
+right = "no_op"
+left = "no_op"
+
+[keys.insert]
+up = "no_op"
+down = "no_op"
+right = "no_op"
+left = "no_op"
+
+[keys.select]
+up = "no_op"
+down = "no_op"
+right = "no_op"
+left = "no_op"
+

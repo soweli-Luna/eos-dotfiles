@@ -1,0 +1,12 @@
+[shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+[colors.primary]
+background = "#000005"
+
+[window]
+opacity = 0.90
+
+[font]
+size = 14
