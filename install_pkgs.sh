@@ -17,12 +17,12 @@ yay -S zoxide
 yay -S polybar
 
 # Install editor
-yay -S helix
+yay -S helix-git
 
 # Install Rust
 yay -S rustup
 rustup update stable
-rustup component add rust-analyzeri
+rustup component add rust-analyzer
 
 # Install music-related programs.
 cargo install spotify_player --features streaming
