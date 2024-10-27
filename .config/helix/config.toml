@@ -7,11 +7,16 @@ line-number = "relative" # It's only relative in normal mode. Absolute in insert
 cursorline = true # Makes the current line highlighted.
 bufferline = "multiple"
 gutters = ["diff", "spacer", "diagnostics", "line-numbers", "spacer", "spacer"]
+rulers = [120]
 
 # Behaviour
 mouse = false
 auto-format = true
 auto-completion = true
+
+end-of-line-diagnostics = "info"
+[editor.inline-diagnostics]
+cursor-line = "hint"
 
 [editor.cursor-shape]
 # Aids in knowing what mode you're in.
@@ -25,9 +30,9 @@ display-messages = true
 
 [editor.statusline]
 # Elements
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "separator", "position", "file-encoding", "file-line-ending", "file-type"]
+left = ["mode", "spinner", "read-only-indicator", "file-modification-indicator"]
+center = ["file-name", "separator", "file-type"]
+right = ["diagnostics", "separator", "register", "position", "file-encoding"]
 separator = "│"
 
 # Overwrite mode indicator text.
