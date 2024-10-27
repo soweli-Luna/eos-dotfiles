@@ -20,7 +20,8 @@ yay -S polybar
 yay -S helix-git
 
 # Install Rust
-yay -S rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Installing with curl because the extra/rustup package fails to set PATH for some reason.
 rustup update stable
 rustup component add rust-analyzer
 
