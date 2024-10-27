@@ -121,11 +121,9 @@ eval "$(zoxide init zsh)"
 #   #Adds the new line and ➜ as the start character.
 #   printf "\n ➜";
 # }
-path+=('/home/xelph/.cargo/bin/')
-export PATH
-export SUDO_EDITOR="/usr/bin/helix"
+export SUDO_EDITOR="/usr/bin/hx"
 
-alias hx="helix"
+# alias hx="helix"
 alias spt="spotify_player"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
