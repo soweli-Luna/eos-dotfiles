@@ -70,16 +70,16 @@ ZSH_THEME="bira"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fancy-ctrl-z zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # for zsh
-_fg () { fg 2> /dev/null }
-zle -N _fg
-bindkey ^Z _fg
+# _fg () { fg 2> /dev/null }
+# zle -N _fg
+# bindkey ^Z _fg
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -105,8 +105,6 @@ bindkey ^Z _fg
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-eval "$(zoxide init zsh)"
 
 # prompt_end() {
 #   if [[ -n $CURRENT_BG ]]; then
