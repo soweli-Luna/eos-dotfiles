@@ -31,8 +31,8 @@ display-messages = true
 [editor.statusline]
 # Elements
 left = ["mode", "spinner", "read-only-indicator", "file-modification-indicator"]
-center = ["file-name", "separator", "file-type"]
-right = ["diagnostics", "separator", "register", "position", "file-encoding"]
+center = ["file-name"]
+right = ["file-type", "diagnostics", "separator", "register", "position", "file-encoding"]
 separator = "│"
 
 # Overwrite mode indicator text.
