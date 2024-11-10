@@ -70,7 +70,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fancy-ctrl-z zoxide)
+plugins=(git fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,6 +120,8 @@ source $ZSH/oh-my-zsh.sh
 #   printf "\n ➜";
 # }
 export SUDO_EDITOR="/usr/bin/hx"
+
+eval "$(zoxide init --cmd cd zsh)"
 
 # alias hx="helix"
 alias spt="spotify_player"
