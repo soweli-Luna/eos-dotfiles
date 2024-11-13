@@ -1,3 +1,7 @@
 #!/bin/env zsh
 cd ~/Backgrounds
-feh --bg-scale $(ls | shuf -n 1)
+TOTAL=$(ls | wc -l)
+rand=$(shuf -i 1-$TOTAL -n 1)
+echo $rand
+feh --bg-fill $(ls | sed -n $rand"p")
+echo $rand > .index
