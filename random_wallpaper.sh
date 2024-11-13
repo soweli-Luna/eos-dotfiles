@@ -1,3 +1,3 @@
 #!/bin/env zsh
-cd /usr/share/endeavouros/backgrounds/custom
+cd ~/Backgrounds
 feh --bg-scale $(ls | shuf -n 1)
