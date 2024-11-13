@@ -17,3 +17,4 @@ fi
 echo $NEW > .index
 FILE=$(ls | sed -n $NEW"p")
 feh --bg-fill $FILE
+notify-send -t 2000 "Wallpaper" "<b>$NEW</b> - $FILE" 
