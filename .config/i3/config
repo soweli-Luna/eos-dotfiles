@@ -196,6 +196,8 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
+# Cycle wallpaper
+bindsym $mod+Shift+w exec ~/random_wallpaper.sh
 
 # keybinding in fancy rofi (automated):
 # bindsym F1 exec ~/.config/i3/scripts/keyhint-2
@@ -414,7 +416,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec_always --no-startup-id sleep 1 && ~/random_wallpaper.sh
+exec --no-startup-id sleep 1 && ~/random_wallpaper.sh
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
