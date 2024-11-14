@@ -1,20 +1,20 @@
 #!/bin/env zsh
 cd ~/Backgrounds
-TOTAL=$(ls | wc -l)
-CURRENT=$(< .index)
+total=$(ls | wc -l)
+current=$(< .index)
 
 if [[ $1 == "next" ]]
 then
-  NEW=$((CURRENT % TOTAL + 1))
+  new=$((current % total + 1))
 elif [[ $1 == "previous" ]]
 then
-  NEW=$(((CURRENT+TOTAL-2) % TOTAL+1))
+  new=$(((current+total-2) % total+1))
 else
-  echo "Invalid argument, (next | previous)" 1>&2
+  echo "invalid argument, (next | previous)" 1>&2
   exit 2
 fi
 
-echo $NEW > .index
-FILE=$(ls | sed -n $NEW"p")
-feh --bg-fill $FILE
-notify-send -t 2000 "Wallpaper" "<b>$NEW</b> - $FILE" 
+echo $new > .index
+file=$(ls | sed -n $new"p")
+feh --bg-fill $file
+notify-send -t 2000 "wallpaper" "<b>$new</b> - $file" 
