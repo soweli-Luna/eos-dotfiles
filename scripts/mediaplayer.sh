@@ -1,25 +1,26 @@
 #!/usr/bin/env zsh
-pstatus=$(playerctl status 2> /dev/null)
-case $pstatus in
-    Playing|Paused)
+
+case $(playerctl status 2> /dev/null) in
+    Playing)
         icon="⏵"
-        if [[ $pstatus == "Paused" ]]
-        then
-            icon="⏸"
-        fi
-        case $(playerctl metadata album 2> /dev/null) in
-            "") # No album name
-                playerctl metadata --format $icon" {{title}} - {{artist}}"
-                ;;
-            $(playerctl metadata title)) # Album name equal to song title
-                playerctl metadata --format $icon" {{title}} - {{artist}}"
-                ;;
-            *) # All info available
-                playerctl metadata --format $icon" {{title}} - {{artist}} - {{album}}"
-                ;;
-        esac
+        ;;
+    Paused)
+        icon="⏸"
         ;;
     *)
         echo ""
+        exit
+        ;;
+esac
+
+case $(playerctl metadata album 2> /dev/null) in
+    "") # No album name
+        playerctl metadata --format $icon" {{trunc(title, 40)}} - {{trunc(artist, 20)}} "
+        ;;
+    $(playerctl metadata title)) # Album name equal to song title
+        playerctl metadata --format $icon" {{trunc(title, 40)}} - {{trunc(artist, 20)}} "
+        ;;
+    *) # All info available
+        playerctl metadata --format $icon" {{trunc(title, 40)}} - {{trunc(artist, 20)}} - {{trunc(album, 20)}}"
         ;;
 esac
