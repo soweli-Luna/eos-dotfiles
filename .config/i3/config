@@ -186,12 +186,12 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec backlight_control +10 && notify-send -e "Inc Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
-bindsym XF86MonBrightnessDown exec backlight_control -10 && notify-send -e "Dec Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
+# bindsym XF86MonBrightnessUp exec backlight_control +10 && notify-send -e "Inc Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
+# bindsym XF86MonBrightnessDown exec backlight_control -10 && notify-send -e "Dec Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
 
 # Backlight setting using dunst osc
-#bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
-#bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
 
 # change focus
 bindsym $mod+j focus left
@@ -399,13 +399,13 @@ for_window [class="discord"] focus
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.fish
 
-exec_always --no-startup-id pkill xborders; xborders -c $HOME/.config/xborders/config
+# exec_always --no-startup-id pkill xborders; xborders -c $HOME/.config/xborders/config
 
 # autotiling
-exec_always --no-startup-id pkill autotiling; autotiling -sr 1.61
+exec_always --no-startup-id pkill autotiling; autotiling -sr 1.61 &
 
 # apply nvidia settings
-exec nvidia-settings --load-config-only
+# exec nvidia-settings --load-config-only
 
 #get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
