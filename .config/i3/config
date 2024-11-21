@@ -186,12 +186,12 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-# bindsym XF86MonBrightnessUp exec backlight_control +10 && notify-send -e "Inc Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
-# bindsym XF86MonBrightnessDown exec backlight_control -10 && notify-send -e "Dec Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
+bindsym XF86MonBrightnessUp exec backlight_control +10 && notify-send -e "Inc Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
+bindsym XF86MonBrightnessDown exec backlight_control -10 && notify-send -e "Dec Brightness $(cat /sys/class/backlight/amdgpu_bl1/brightness)"
 
 # Backlight setting using dunst osc
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+# bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
+# bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
 
 # change focus
 bindsym $mod+j focus left
